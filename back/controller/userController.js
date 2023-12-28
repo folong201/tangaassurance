@@ -1,7 +1,6 @@
 // Importer le modèle d'utilisateur
 const User = require('./../models/user');
-const bcrypt = require('bcrypt');
-// const User = require('../models/user.js');
+const bcrypt = require('bcrypt'); 
 require('dotenv').config();
 
 // Créer un utilisateur
