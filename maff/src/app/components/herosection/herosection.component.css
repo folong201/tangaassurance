@@ -1,0 +1,155 @@
+.herosection {
+  max-width: 100%;
+  background-image: url("../../../assets/images/background.png");
+  background-size: cover;
+}
+
+.herosection {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-big-text {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-small-text {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn .btn {
+  margin: 0 1rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 37px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  border: 1px solid var(--light-text-color, #FFF);
+}
+
+.bluebg {
+  background-color: #23A6F0;
+}
+
+.herosection-card {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  width: 328px;
+  padding: 35px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--light-background-color, #FFF);
+  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+}
+
+.card-title {
+  color: var(--text-color, #252B42);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+.herosection-card {
+  position: relative;
+  bottom: -100px;
+}
+
+
+@media (max-width: 768px) {
+  .herosection {
+    padding: 2rem;
+  }
+
+  .hero-big-text {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .hero-small-text {
+    font-size: 1rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .hero-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-btn .btn {
+    margin: 0 1rem;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 37px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    border: 1px solid var(--light-text-color, #FFF);
+  }
+
+  .bluebg {
+    background-color: #23A6F0;
+  }
+
+  .herosection-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    max-width: 200px;
+    padding: 35px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--light-background-color, #FFF);
+    box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    color: var(--text-color, #252B42);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+  }
+
+  .herosection-card {
+    position: relative;
+    bottom: -100px;
+  }
+}
+
+/* ? */

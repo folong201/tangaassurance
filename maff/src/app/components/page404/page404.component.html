@@ -1,0 +1,114 @@
+<div class="page404">
+  <div class="page404__container">
+    <div class="page404__container__logo">
+      <!-- <img src="assets/images/logo.png" alt="logo" /> -->
+    </div>
+    <div class="page404__container__form">
+      <h1>404</h1>
+      <p>Page not found</p>
+      <a routerLink="/user/home" mat-raised-button color="secondary">Home</a>
+    </div>
+  </div>
+</div>
+<style>
+  .page404 {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page404__container {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page404__container__logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page404__container__logo img {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .page404__container__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .page404__container__form h1 {
+    font-size: 100px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  .page404__container__form p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  .page404__container__form a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .page404__container__form a:hover {
+    color: #fff;
+  }
+
+  .page404__container__form button {
+    width: 100%;
+    height: 50px;
+    background: #000;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .page404__container__form button:hover {
+    background: #000;
+  }
+
+  .page404__container__form .err {
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .page404__container__form .formgroup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+</style>

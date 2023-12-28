@@ -1,0 +1,60 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="logincompo">
+  <div class="login">
+    <div class="login__container">
+      <div class="login__container__logo">
+        <!-- <img src="assets/images/logo.png" alt="logo" /> -->
+        <h1>BestAssurance</h1>
+      </div>
+      <h5 class="login__container__logo">register</h5>
+      <div class="login__container__form">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <div class="login__container__form__input">
+            <div class="formgroup">
+              <label for="">Nom </label>
+              <input type="text" placeholder="Nom" formControlName="name" />
+              <span class="err"
+                *ngIf="registerForm.controls.name.touched && registerForm.controls.name.errors?.['required']">Name
+                is required</span>
+            </div>
+          </div>
+          <div class="login__container__form__input">
+            <div class="formgroup">
+              <label for="">email </label>
+              <input type="email" placeholder="email" formControlName="email" />
+              <span class="err"
+                *ngIf="registerForm.controls.email.touched && registerForm.controls.email.errors?.['required']">Email
+                is required</span>
+            </div>
+          </div>
+          <div class="login__container__form__input">
+            <div class="formgroup">
+              <label for="">Phone number</label>
+              <input type="tel" placeholder="phone Number" formControlName="phone" />
+              <span class="err"
+                *ngIf="registerForm.controls.phone.touched && registerForm.controls.phone.errors?.['required']">Phone Number
+                is required</span>
+            </div>
+          </div>
+          <div class="login__container__form__input">
+            <div class="formgroup">
+              <label for="">Password </label>
+              <input type="password" placeholder="password" formControlName="password" />
+              <span class="err"
+                *ngIf="registerForm.controls.password.touched && registerForm.controls.password.errors?.['required']">Password
+                is required</span>
+            </div>
+          </div>
+
+          <div class="login__container__form__button">
+            <button type="submit">Login</button>
+            <span class="err" *ngIf="showerr">Erreur de connexion au serveur</span>
+          </div>
+          <span>You Alreasy have account ? <a routerLink="/auth/login">Login</a></span>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

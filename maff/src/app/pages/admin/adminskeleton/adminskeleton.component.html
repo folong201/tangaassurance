@@ -1,0 +1,25 @@
+<div class="ng-container">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Dashboard</p>
+
+      <a routerLink="/admin" mat-raised-button color="primary">Home</a> <br>
+      <a routerLink="assurancelist" mat-raised-button color="primary">Assurance List</a> <br>
+      <a routerLink="inactive" mat-raised-button color="primary">inactive</a><br>
+      <a routerLink="arelancer" mat-raised-button color="primary">A relancer</a> <br> <br>
+      <button (click)="logout()" mat-raised-button color="warn">Logout</button> <br>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+      <div *ngIf="loaderService.isLoading | async">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      </div>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-container>
+
+</div>

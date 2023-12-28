@@ -1,0 +1,37 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="logincompo">
+  <div class="login">
+    <div class="login__container">
+      <div class="login__container__logo">
+        <!-- <img src="assets/images/logo.png" alt="logo" /> -->
+        <h1>BestAssurance</h1>
+      </div>
+      <h5 class="login__container__logo">Login</h5>
+      <div class="login__container__form">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="login__container__form__input">
+            <div class="formgroup">
+              <label for="">Phone number</label>
+              <input type="tel" placeholder="phone Number" formControlName="phone" />
+              <span class="err" *ngIf="loginForm.controls.phone.touched && loginForm.controls.phone.errors?.['required']">Phone Number is required</span>
+            </div>
+          </div>
+          <div class="login__container__form__input">
+            <div class="formgroup">
+              <label for="">Password </label>
+              <input type="password" placeholder="password" formControlName="password" />
+              <span class="err" *ngIf="loginForm.controls.password.touched && loginForm.controls.password.errors?.['required']">Password is required</span>
+            </div>
+          </div>
+
+          <div class="login__container__form__button">
+            <button type="submit">Login</button>
+            <span *ngIf="showerr">{{ errmsg }}</span>
+          </div>
+          <span>You Don't have account ? <a routerLink="/auth/register">Register</a></span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

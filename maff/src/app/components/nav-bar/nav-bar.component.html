@@ -1,0 +1,23 @@
+
+<header>
+
+  <a routerLink="" class="logo">BestAssurance</a>
+  <div>
+
+    <ul class="navbar" [ngClass]="{'open': isViewAble}">
+      <li><a routerLink="/" [routerLinkActiveOptions]={exact:true} routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/services" routerLinkActive="active">Our service</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+    <li><a routerLink="/article" routerLinkActive="active">Articles</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+  <div class="main">
+    <a routerLink="/auth/login" class="user login " [ngClass]="{'activable': islogedIn}">sign in</a>
+    <a routerLink="/auth/register" class="register" [ngClass]="{'activable': islogedIn}">register</a>
+    <a routerLink="/{{ role }}" class="register" [ngClass]="{'activable': !islogedIn}">dashboard</a>
+
+    <img class="menu-icon nodisplay" (click)="toggle()"
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAANElEQVR4nO3VwQkAIAwDwO4/lh0sTuBDqPi5WyAQCKkCpiXpvNe/gtd4Y3BkTjAm3gmoOxvWvmrcKBZ+KAAAAABJRU5ErkJggg==">
+  </div>
+</div>
+</header>

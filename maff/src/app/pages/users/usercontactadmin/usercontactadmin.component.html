@@ -1,0 +1,29 @@
+<div class="contactadmin">
+  <div class="contactadmin__container">
+    <div class="contactadmin__container__form">
+      <form [formGroup]="contactForm" (ngSubmit)="contact()">
+        <div class="contactadmin__container__form__input">
+          <div class="formgroup">
+            <label for="">Phone number</label>
+            <input type="tel" placeholder="phone Number" formControlName="phone" />
+            <span class="err" *ngIf="contactForm.controls.phone.touched && contactForm.controls.phone.errors?.['required']">Phone Number is required</span>
+          </div>
+        </div>
+        <div class="contactadmin__container__form__input">
+          <div class="formgroup">
+            <label for="">Message </label>
+            <textarea placeholder="message" formControlName="message"></textarea>
+            <span class="err" *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.['required']">Message is required</span>
+          </div>
+        </div>
+
+        <div class="contactadmin__container__form__button">
+          <button type="submit">Send</button>
+          <span *ngIf="showerr">Erreur de connexion au serveur</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

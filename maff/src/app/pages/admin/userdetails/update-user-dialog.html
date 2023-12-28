@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Update User</h1>
+<div mat-dialog-content>
+  <!-- <form [formGroup]="userForm"> -->
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="user.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Phone</mat-label>
+    <input type="number" matInput [(ngModel)]="user.phone">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="user.email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="user.password">
+  </mat-form-field>
+  <!-- </form> -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="user" cdkFocusInitial>Update</button>
+</div>

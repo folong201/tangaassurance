@@ -1,0 +1,64 @@
+
+<div mat-dialog-content>
+  <p>Create New Assurance</p>
+  <div class="form-row">
+    <mat-form-field class="form-field">
+      <mat-label>Assurance Info</mat-label>
+      <input class="enter" matInput [(ngModel)]="assurance.name" placeholder="Assurance Info" style="width: 300px;">
+    </mat-form-field>
+  </div>
+  <div class="form-row">
+    <mat-form-field class="form-field">
+      <mat-label>Assurance Type</mat-label>
+      <input class="enter" matInput [(ngModel)]="assurance.type" placeholder="Assurance type" style="width: 300px;">
+    </mat-form-field>
+  </div>
+  <div class="form-row">
+    <mat-form-field class="form-field">
+      <mat-label>Assurance Begin</mat-label>
+      <input type="text" class="enter" matInput [(ngModel)]="assurance.begin" placeholder="Assurance Begin"
+        style="width: 300px;">
+    </mat-form-field>
+  </div>
+  <div class="form-row">
+    <mat-form-field class="form-field">
+      <mat-label>Assurance End</mat-label>
+      <input type="text" class="enter" matInput [(ngModel)]="assurance.end" placeholder="Assurance End"
+        style="width: 300px;">
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuller</button>
+  <button mat-button [mat-dialog-close]="assurance" cdkFocusInitial>Enregistrer</button>
+</div>
+
+<style>
+  h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .entrer {
+    min-width: 400px;
+
+  }
+
+  button {
+    margin-right: 10px;
+  }
+</style>
