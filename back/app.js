@@ -16,6 +16,6 @@ app.use(router);
 const db = require("./models/db.js");
 //appeller la fonction relance aores tout les 12heure
 // setInterval(relancer.relance, 43200000);
-setInterval(relancer.relance, 60000);
+// setInterval(relancer.relance, 60000);
 
 module.exports = app;
