@@ -1,5 +1,5 @@
 const Assurance = require('../models/Assurance.js');
-const User = require('../models/user');
+const User = require('../models/User.js');
 const moment = require('moment');
 const https = require('https');
 
