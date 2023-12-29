@@ -6,14 +6,25 @@
           <div class="formgroup">
             <label for="">Phone number</label>
             <input type="tel" placeholder="phone Number" formControlName="phone" />
-            <span class="err" *ngIf="contactForm.controls.phone.touched && contactForm.controls.phone.errors?.['required']">Phone Number is required</span>
+            <span class="err"
+              *ngIf="contactForm.controls.phone.touched && contactForm.controls.phone.errors?.['required']">Phone Number
+              is required</span>
+          </div>
+        </div>
+        <div class="contactadmin__container__form__input">
+          <div class="formgroup">
+            <label for="">Email</label>
+            <input type="email" placeholder="Email" formControlName="email" />
+            <span class="err"
+              *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.['required']">Email
+              is
+              required</span>
           </div>
         </div>
         <div class="contactadmin__container__form__input">
           <div class="formgroup">
             <label for="">Message </label>
-            <textarea placeholder="message" formControlName="message"></textarea>
-            <span class="err" *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.['required']">Message is required</span>
+            <textarea placeholder="message" formControlName="content"></textarea>
           </div>
         </div>
 
@@ -25,5 +36,3 @@
     </div>
   </div>
 </div>
-
-

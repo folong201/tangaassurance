@@ -1,12 +1,12 @@
 // http.interceptor.ts
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler } from '@angular/common/http';
-import { LoaderService } from './services/loader/loader.service';
+import { LoaderService } from '../services/loader/loader.service';
 import { finalize } from 'rxjs';
 
 @Injectable()
 export class MyHttpInterceptor implements HttpInterceptor {
-  constructor(private loadeinService:LoaderService){}
+  constructor(private loadeinService: LoaderService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     console.log("Token");
@@ -18,7 +18,7 @@ export class MyHttpInterceptor implements HttpInterceptor {
     });
     return next.handle(modifiedReq).pipe(
       finalize(
-        ()=>{
+        () => {
           this.loadeinService.isLoading.next(false)
         }
       )

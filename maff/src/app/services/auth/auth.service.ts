@@ -29,6 +29,7 @@ export class AuthService {
     localStorage.setItem('name', data.user.name)
     localStorage.setItem('email', data.user.email)
     localStorage.setItem('phone', data.user.phone)
+    localStorage.setItem('isAuth',"true")
 
     if (data.user.role == "admin") {
       return "admin"

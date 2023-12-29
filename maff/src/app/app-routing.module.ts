@@ -14,7 +14,9 @@ import { AssurancelistComponent } from './pages/admin/assurancelist/assurancelis
 import { ArelancerComponent } from './pages/admin/arelancer/arelancer.component';
 import { InactiveassuranceComponent } from './pages/admin/inactiveassurance/inactiveassurance.component';
 import { UserdetailsComponent } from './pages/admin/userdetails/userdetails.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './guard/auth.guard';
+import { AdminmessageComponent } from './pages/admin/adminmessage/adminmessage.component';
+import { isadminGuard } from './guard/isadmin.guard';
 
 export const routes: Routes = [
   { path: '', component: SkeletonComponent },
@@ -23,21 +25,22 @@ export const routes: Routes = [
   {
     path: 'user', component: UserdashboardskeletonComponent,
     children: [
-      { path: 'home', component: UserhomeComponent },
-      { path: 'contactadmin', component: UsercontactadminComponent },
+      { path: 'home', component: UserhomeComponent,canActivate:[AuthGuard]  },
+      { path: 'contactadmin', component: UsercontactadminComponent,canActivate:[AuthGuard]  },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   },
   {
-    path: "admin", component: AdminskeletonComponent,
+    path: "admin", component: AdminskeletonComponent ,
     children: [
-      { path: '', component: AdminhomeComponent },//liste de tout les clients
+      { path: '', component: AdminhomeComponent  ,canActivate:[AuthGuard,isadminGuard] },//liste de tout les clients
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      {path:'assurancelist',component:AssurancelistComponent},
-      {path:'arelancer',component:ArelancerComponent},
-      {path:'inactive',component:InactiveassuranceComponent},
+      { path: 'assurancelist', component: AssurancelistComponent  ,canActivate:[AuthGuard,isadminGuard] },
+      { path: 'arelancer', component: ArelancerComponent  ,canActivate:[AuthGuard,isadminGuard] },
+      { path: 'inactive', component: InactiveassuranceComponent  ,canActivate:[AuthGuard,isadminGuard] },
       //route pour les user details
-      { path: 'user/:id', component: UserdetailsComponent },
+      { path: 'user/:id', component: UserdetailsComponent ,canActivate:[AuthGuard,isadminGuard]  },
+      { path: 'messages', component: AdminmessageComponent  ,canActivate:[AuthGuard,isadminGuard] },
       // { path: 'user/:id', component: UserdetailsComponent,canActivate:[AuthGuard] }
     ]
   },
