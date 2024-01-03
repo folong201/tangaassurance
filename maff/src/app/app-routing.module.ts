@@ -17,8 +17,10 @@ import { UserdetailsComponent } from './pages/admin/userdetails/userdetails.comp
 import { AuthGuard } from './guard/auth.guard';
 import { AdminmessageComponent } from './pages/admin/adminmessage/adminmessage.component';
 import { isadminGuard } from './guard/isadmin.guard';
+import { ContactuspageComponent } from './components/contactuspage/contactuspage.component';
 
 export const routes: Routes = [
+  {path:"contact",component:ContactuspageComponent},
   { path: '', component: SkeletonComponent },
   { path: "auth/login", component: LoginComponent },
   { path: "auth/register", component: RegisterComponent },

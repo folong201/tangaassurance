@@ -38,6 +38,7 @@ import { MatDialogModule, } from '@angular/material/dialog';
 import { MyHttpInterceptor } from './interceptors/my-http-interceptor.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AdminmessageComponent } from './pages/admin/adminmessage/adminmessage.component';
+import { ContactuspageComponent } from './components/contactuspage/contactuspage.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { AdminmessageComponent } from './pages/admin/adminmessage/adminmessage.c
     AssurancelistComponent,
     UserdetailsComponent,
     AdminmessageComponent,
+    ContactuspageComponent,
   ],
   imports: [
     BrowserModule,

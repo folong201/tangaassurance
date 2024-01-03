@@ -48,7 +48,9 @@
   display: flex;
   justify-content: space-evenly;
 }
-
+.card-subtile{
+  text-align: left;
+}
 .card {
   display: flex;
   width: 328px;
@@ -58,6 +60,14 @@
   gap: 10px;
   background: var(--light-background-color, #FFF);
   box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+}
+
+.bluebg {
+  background-color: #23A6F0;
+}
+
+.whitebg {
+  background-color: #fff;
 }
 
 .card-title {
@@ -134,6 +144,7 @@
     box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
     margin: 10px;
     border-radius: 10px;
+    padding: 100px;
   }
 
   .card-title {
@@ -149,6 +160,48 @@
   .herosection-card {
     position: relative;
     bottom: -100px;
+    gap: 30px;
+    padding: 15px;
+  }
+}
+
+.bluebg {
+  background-color: #23A6F0;
+}
+.whitetext{
+  color: #fff;
+}
+
+@media (max-width: 1090px) {
+
+  .card {
+    display: flex;
+    max-width: 200px;
+    padding: 35px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--light-background-color, #FFF);
+    box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    color: var(--text-color, #252B42);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+  }
+
+  .herosection-card {
+    position: relative;
+    bottom: -100px;
+    gap: 30px;
+    padding: 15px;
   }
 }
 
