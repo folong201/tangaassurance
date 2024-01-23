@@ -1,22 +1,22 @@
 <div mat-dialog-content>
-  <p>Create New User</p>
-  <mat-form-field class=".form-row">
-    <mat-label>Favorite Animal</mat-label>
+  <p>Créer un nouvel utilisateur</p>
+  <mat-form-field class="form-row">
+    <mat-label>Nom</mat-label>
     <input matInput [(ngModel)]="user.name">
   </mat-form-field>
-  <mat-form-field class=".form-row">
-    <mat-label>Phone</mat-label>
+  <mat-form-field class="form-row">
+    <mat-label>Téléphone</mat-label>
     <input type="tel" matInput [(ngModel)]="user.phone" >
   </mat-form-field>
-  <mat-form-field class=".form-row">
+  <mat-form-field class="form-row">
     <mat-label>Email</mat-label>
     <input matInput [(ngModel)]="user.email">
   </mat-form-field>
-  <mat-form-field class=".form-row">
-    <mat-label>Password(defautl:password)</mat-label>
+  <mat-form-field class="form-row">
+    <mat-label>Mot de passe (par défaut : password)</mat-label>
     <input matInput [(ngModel)]="user.password" type="password">
   </mat-form-field>
-  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onNoClick()">Annuler</button>
   <button mat-button [mat-dialog-close]="user" cdkFocusInitial>Ok</button>
 </div>
 <style>

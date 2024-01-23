@@ -5,6 +5,9 @@ import { UserService } from 'src/app/services/users/user.service';
 import { Router, RouterModule } from '@angular/router';
 import { AssuranceService } from 'src/app/services/assurance/assurance.service';
 import { Subscription } from 'rxjs';
+import { DatePipe } from '@angular/common';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+
 import {
   MatDialog,
   MAT_DIALOG_DATA,
@@ -15,11 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-userdetails',
@@ -191,6 +191,8 @@ export class UserdetailsComponent implements AfterViewInit ,OnInit{
     MatButtonModule,
     MatDialogModule,
     RouterModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
 })
 export class DialogOverviewExampleDialog {
@@ -225,6 +227,8 @@ export class DialogOverviewExampleDialog {
     MatButtonModule,
     MatDialogModule,
     RouterModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
 })
 export class UpdateAssuranceDialog {
@@ -252,6 +256,8 @@ export class UpdateAssuranceDialog {
     MatButtonModule,
     MatDialogModule,
     RouterModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
 })
 export class UpdateUserDialog {

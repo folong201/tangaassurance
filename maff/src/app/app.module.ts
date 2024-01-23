@@ -39,6 +39,9 @@ import { MyHttpInterceptor } from './interceptors/my-http-interceptor.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AdminmessageComponent } from './pages/admin/adminmessage/adminmessage.component';
 import { ContactuspageComponent } from './components/contactuspage/contactuspage.component';
+import { DatePipe } from '@angular/common';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+
 
 
 @NgModule({
@@ -83,10 +86,12 @@ import { ContactuspageComponent } from './components/contactuspage/contactuspage
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDatepickerModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: MyHttpInterceptor, multi: true },
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

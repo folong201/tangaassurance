@@ -29,14 +29,14 @@
       <!-- Position Column -->
       <ng-container matColumnDef="begin">
         <th mat-header-cell *matHeaderCellDef>begin </th>
-        <td mat-cell *matCellDef="let element"> {{element.begin | date: 'dd/MM/yyyy HH:mm:ss'}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.begin | date: 'dd/MM/yyyy'}} </td>
       </ng-container>
 
 
       <!-- Weight Column -->
       <ng-container matColumnDef="end">
         <th mat-header-cell *matHeaderCellDef> end </th>
-        <td mat-cell *matCellDef="let element">{{ element.end | date: 'dd/MM/yyyy HH:mm:ss' }}
+        <td mat-cell *matCellDef="let element">{{ element.end | date: 'dd/MM/yyyy' }}
         </td>
       </ng-container>
 

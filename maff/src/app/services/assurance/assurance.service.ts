@@ -29,4 +29,10 @@ export class AssuranceService {
   getByUserId(id:string) {
     return this.http.get(`${this.base}user/${id}`)
   }
+  getExpiredAssurance(){
+    return this.http.get(`${this.base}expired/get`)
+  }
+  renewAssurance(assurance:any){
+    return this.http.put(`${this.base}renew/${assurance._id}`,assurance)
+  }
 }

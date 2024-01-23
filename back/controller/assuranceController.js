@@ -80,3 +80,39 @@ exports.getAssuranceByUser = async (req, res, next) => {
         res.status(500).json({ error: error.message, ok: 'false' });
     }
 }
+
+exports.expiredAssurance = async (req, res, next) => {
+    try {
+        const assurances = await Assurance.find({ state: "expired" });
+        res.status(200).json(assurances);
+    } catch (error) {
+        res.status(500).json({ error: error.message, ok: 'false' });
+    }
+}
+
+exports.renewAssurance = async (req, res, next) => {
+    try {
+        const assurance = await Assurance.findById(req.params.id);
+        if (!assurance) {
+            return res.status(404).json({ error: 'Assurance not found' });
+        } else {
+            const updatedAssurance = await Assurance.findByIdAndUpdate(req.params.id, { 
+                begin: req.body.begin || assurance.begin,
+                end: req.body.end || assurance.end,
+                long: req.body.long || assurance.long,
+                remember: req.body.remember || assurance.remember,
+                state: "active",
+                name: req.body.name || assurance.name,
+                type: req.body.type || assurance.type,
+                nrbrelance: assurance.nrbrelance + 1, // Increment the number of relance
+                assurance: req.body.assurance || assurance.assurance,
+                createdAt: assurance.createdAt,
+                updatedAt: new Date(),
+                user: req.body.user || assurance.user
+            }, { new: true });
+            res.status(200).json({ ok: 'true', message: 'Assurance renew', assurance: updatedAssurance });
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}

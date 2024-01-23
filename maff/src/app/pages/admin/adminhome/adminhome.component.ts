@@ -32,6 +32,7 @@ export class AdminhomeComponent implements AfterViewInit {
   displayedColumns: string[] = ['name', 'email', 'phone', 'role'];
   dataSource !: MatTableDataSource<any>;
   user = []
+  username = ''
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
@@ -73,7 +74,9 @@ export class AdminhomeComponent implements AfterViewInit {
       })
     });
   }
-
+  filterUserByName(){
+    this.dataSource.filter = this.username.trim().toLowerCase();
+  }
 }
 
 @Component({
